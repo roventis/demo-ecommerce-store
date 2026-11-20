@@ -1,0 +1,11 @@
+node_modules/
+.env
+*.log
+.DS_Store
+Thumbs.db
+
+# SQLite WAL and journal files (keep demo.sqlite seed or allow auto-seed)
+*.db-shm
+*.db-wal
+database/*.sqlite-shm
+database/*.sqlite-wal

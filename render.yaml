@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: demo-ecommerce-platform
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm run render-build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CURRENCY
+        value: INR
+      - key: TIMEZONE
+        value: Asia/Kolkata
+      - key: GST_RATE
+        value: "0.18"
+      - key: RAZORPAY_KEY_ID
+        value: rzp_test_DEMO_STORE_KEY_2026
+      - key: RAZORPAY_KEY_SECRET
+        value: rzp_test_secret_DEMO_SEC_2026
